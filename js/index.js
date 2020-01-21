@@ -28,7 +28,7 @@ console.log(signButton);
 
 signButton.forEach(element => {
   console.log("btn element", element);
-  element.addEventListener("click", () => {
+  element.addEventListener("mousedown", () => {
     element.textContent = "Enjoy Your Trip";
     element.style.color = "white";
   });
@@ -37,7 +37,7 @@ signButton.forEach(element => {
 const busImage = document.querySelector("img");
 console.log(busImage);
 
-busImage.addEventListener("mouseover", () => {
+busImage.addEventListener("auxclick", () => {
   busImage.src =
     "https://images.unsplash.com/photo-1525962898597-a4ae6402826e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80";
 });
@@ -69,7 +69,7 @@ const firstChildBtn = childBtn[0];
 
 firstChildBtn.addEventListener("click", event => {
   console.log(event);
-  event.target.style.backgroundColor = "17A2B8";
+  event.target.style.backgroundColor = "#17A2B8";
   event.stopPropagation();
 });
 
@@ -90,3 +90,26 @@ const toFunBus = document.querySelector(".intro");
 toFunBus.addEventListener("dblclick", () => {
   toFunBus.style.backgroundColor = "#87D790";
 });
+
+const text = document.querySelectorAll("p");
+console.log(text);
+const footerText = text[9];
+
+footerText.addEventListener("mousemove", () => {
+  footerText.style.backgroundColor = "gray";
+});
+
+footerText.addEventListener("mouseout", () => {
+  footerText.style.backgroundColor = "#17A2B8";
+});
+
+//mouseout
+//mousemove
+//dblclick
+//wheel
+//click
+//mouseover
+//mouseleave
+//resize
+//auxclick
+//mousedown
